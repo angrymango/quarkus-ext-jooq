@@ -1,0 +1,3 @@
+= Quarkus jOOQ extension
+
+This is a https://github.com/quarkusio/quarkus[Quarkus] extension for https://github.com/jOOQ/jOOQ[jOOQ].
