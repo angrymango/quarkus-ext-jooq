@@ -30,14 +30,18 @@ import io.quarkus.test.QuarkusUnitTest;
  *
  * @author <a href="mailto:leo.tu.taipei@gmail.com">Leo Tu</a>
  */
-@Disabled
+//@Disabled
 public class InjectTest {
     private static final Logger LOGGER = Logger.getLogger(InjectTest.class);
 
     @RegisterExtension
     static final QuarkusUnitTest config = new QuarkusUnitTest()
             .setArchiveProducer(() -> ShrinkWrap.create(JavaArchive.class) //
-                    .addClasses(TestServiceBean.class));
+                    .addAsResource("application.properties", "application.properties") //
+                    .addClasses(
+                            TestServiceBean.class,
+                            MyCustomConfigurationFactory.class
+                        ));
 
     @Inject
     TestServiceBean testBean;

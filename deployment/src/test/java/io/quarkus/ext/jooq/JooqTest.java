@@ -24,11 +24,7 @@ import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.jooq.DSLContext;
 import org.jooq.impl.DSL;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.RegisterExtension;
 
 import io.quarkus.runtime.ShutdownEvent;
@@ -83,7 +79,14 @@ public class JooqTest {
     static final QuarkusUnitTest config = new QuarkusUnitTest() //
             .setArchiveProducer(() -> ShrinkWrap.create(JavaArchive.class) //
                     .addAsResource("application.properties", "application.properties") //
-                    .addClasses(TestBean.class, MyCustomConfigurationFactory.class));
+                    .addClasses(
+                            TestBean.class,
+                            MyCustomConfigurationFactory.class,
+                            MyCustomConfiguration1.class,
+                            QDemo.class,
+                            RDemo.class,
+                            Public.class,
+                            Demo.class));
 
     @Inject
     TestBean testBean;

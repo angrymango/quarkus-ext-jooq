@@ -13,6 +13,10 @@
     <artifactId>quarkus-ext-jooq-deployment</artifactId>
     <name>=Quarkus jOOQ Extension - Deployment</name>
 
+    <properties>
+        <maven.surefire.version>3.0.0-M4</maven.surefire.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>io.quarkus</groupId>
@@ -66,6 +70,16 @@
                             <version>${quarkus.version}</version>
                         </path>
                     </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven.surefire.version}</version>
+                <configuration>
+                    <systemPropertyVariables>
+                        <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
+                        <maven.home>${maven.home}</maven.home>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
         </plugins>
