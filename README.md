@@ -49,3 +49,12 @@ The DSL context can then be injected with:
 DSLContext dsl; // default
 ```
 
+Building a native image requires javax.persistence. An easy way to add it is to use:
+
+```xml
+<dependency>
+    <groupId>org.hibernate.javax.persistence</groupId>
+    <artifactId>hibernate-jpa-2.1-api</artifactId>
+    <version>1.0.0.Final</version>
+</dependency>
+```
