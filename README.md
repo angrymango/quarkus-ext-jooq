@@ -30,6 +30,10 @@ You also need quarkus-agroal:
 
 ```sh
 ./gradlew addExtension --extensions="io.quarkus:quarkus-agroal"
+
+# or for maven users
+
+./mvnw quarkus:add-extension -Dextensions="io.quarkus:quarkus-agroal"
 ```
 The minimum required configuration after adding you chosen database drivers (in this case postgres) would be:
 
@@ -50,6 +54,12 @@ DSLContext dsl; // default
 ```
 
 Building a native image requires javax.persistence. An easy way to add it is to use:
+
+```groovy
+compile group: 'org.hibernate.javax.persistence', name: 'hibernate-jpa-2.1-api', version: '1.0.0.Final'
+```
+
+Or for maven users
 
 ```xml
 <dependency>
