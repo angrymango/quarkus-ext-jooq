@@ -6,7 +6,7 @@
 
     <groupId>io.quarkus.ext</groupId>
     <artifactId>quarkus-ext-jooq-parent</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.7.0-SNAPSHOT</version>
     <name>=Quarkus jOOQ Extension - Parent</name>
 
     <packaging>pom</packaging>
@@ -17,7 +17,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.parameters>true</maven.compiler.parameters>
-        <quarkus.version>1.5.2.Final</quarkus.version>
+        <quarkus.version>1.7.0.Final</quarkus.version>
         <compiler-plugin.version>3.8.1</compiler-plugin.version>
         <org.jooq.version>3.13.2</org.jooq.version>
     </properties>
@@ -30,7 +30,7 @@
         <dependencies>
             <dependency>
                 <groupId>io.quarkus</groupId>
-                <artifactId>quarkus-bom-deployment</artifactId>
+                <artifactId>quarkus-bom</artifactId>
                 <version>${quarkus.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
