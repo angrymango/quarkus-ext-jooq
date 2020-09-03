@@ -17,9 +17,9 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.parameters>true</maven.compiler.parameters>
-        <quarkus.version>1.7.0.Final</quarkus.version>
+        <quarkus.version>1.7.2.Final</quarkus.version>
         <compiler-plugin.version>3.8.1</compiler-plugin.version>
-        <org.jooq.version>3.13.2</org.jooq.version>
+        <org.jooq.version>3.13.4</org.jooq.version>
     </properties>
 
     <modules>
